@@ -1,6 +1,23 @@
-<h2>Criar Conta</h2>
-<input type="email" id="signupEmail" placeholder="Email">
-<input type="password" id="signupPassword" placeholder="Senha">
-<button onclick="signup()">Registrar</button>
-<script src="firebase.js"></script>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Criar Conta</title>
+</head>
+<body>
+
+  <h2>Criar Conta</h2>
+  <input type="email" id="signupEmail" placeholder="Email">
+  <input type="password" id="signupPassword" placeholder="Senha">
+  <button onclick="signup()">Registrar</button>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <!-- Seus scripts -->
+  <script src="firebase.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

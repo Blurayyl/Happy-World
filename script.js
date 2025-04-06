@@ -43,3 +43,30 @@ function saveProfile() {
     bio
   }).then(() => alert("Perfil salvo!"));
 }
+
+<!-- SDKs Firebase v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- Seus arquivos -->
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+function signup() {
+    console.log("Cliquei no botão de criar conta!"); // 🧪 Teste
+  
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+  
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log("Conta criada com sucesso!");
+        window.location.href = "profile.html";
+      })
+      .catch(error => {
+        console.error("Erro ao criar conta:", error);
+        alert(error.message);
+      });
+  }
+  
